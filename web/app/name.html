@@ -161,7 +161,7 @@
           if (document.getElementById("UserName").value.length <= 2) {
             alert("Submission to short! must be at least 3 characters");
           } else {
-            var output = false
+            var output = false;
             for (let c of document.getElementById("UserName").value) {
               if (
                 !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
@@ -169,15 +169,14 @@
                 )
               ) {
                 alert("Invalid submission, please try again");
-                output = false
+                output = false;
                 break;
               } else {
-                output = true
+                output = true;
               }
-
             }
             if (output) {
-              alert("Success")
+              alert("Success");
             }
           }
         });
