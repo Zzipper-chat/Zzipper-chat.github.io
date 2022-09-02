@@ -90,7 +90,9 @@
               placeholder="Enter your preferred username here"
             />
           </div>
-          <button type="submit" class="btn btn-primary" id="submit-NAME">Submit</button>
+          <button type="submit" class="btn btn-primary" id="submit-NAME">
+            Submit
+          </button>
           <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
       </div>
@@ -155,16 +157,19 @@
         crossorigin="anonymous"
       ></script>
       <script>
-        const form  = document.getElementById('submit-NAME');
+        const form = document.getElementById("submit-NAME");
 
-form.addEventListener('submit', (event) => {
-    
-    for (let c of document.getElementById("UserName")) {
-       if (!("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(c))) {
-         alert("Invalid submission, please try again")
-       }
-}
-});
+        form.addEventListener("submit", (event) => {
+          for (let c of document.getElementById("UserName")) {
+            if (
+              !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
+                c
+              )
+            ) {
+              alert("Invalid submission, please try again");
+            }
+          }
+        });
       </script>
     </div>
   </body>
