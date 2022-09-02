@@ -5,3 +5,6 @@ var ready = (callback) => {
 ready(() => {
   document.querySelector(".header").style.height = window.innerHeight + "px";
 });
+document.getElementById("nav-luancher").onclick = () => {
+  window.open("/app");
+}
