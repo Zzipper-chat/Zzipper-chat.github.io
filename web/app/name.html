@@ -158,22 +158,24 @@
         const form = document.getElementById("form-NAME");
 
         form.addEventListener("submit", (event) => {
-          if (document.getElementById("UserName").value.length <= 2){
-            alert("Submission to short! must be at least 2 characters");
+          if (document.getElementById("UserName").value.length <= 2) {
+            alert("Submission to short! must be at least 3 characters");
           } else {
-          for (let c of document.getElementById("UserName").value) {
-            if (
-              !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
-                c
-              )
-            ) {
-              alert("Invalid submission, please try again");
-              break;
-            } else {
-              alert("Sucess");
-          }
+            for (let c of document.getElementById("UserName").value) {
+              if (
+                !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
+                  c
+                )
+              ) {
+                alert("Invalid submission, please try again");
+                break;
+              } else {
+                alert("Sucess");
+              }
+            }
           }
         });
+
       </script>
     </div>
   </body>
