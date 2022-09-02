@@ -1,1 +1,34 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #dac4f2 !important;
+}
 
+.navbar {
+  background: #240647;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #c5b2db !important;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 1em !important;
+}
+
+.nav-link:hover {
+  color: #896aad !important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.header {
+    background-image: url('images/header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
