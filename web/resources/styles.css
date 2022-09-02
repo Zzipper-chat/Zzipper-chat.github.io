@@ -27,7 +27,7 @@ body {
 }
 
 .header {
-    background-image: url('images/F4C33BD1-989A-4CCC-B73C-9AD3A65CDE5A.jpg');
+    background-image: url('/images/F4C33BD1-989A-4CCC-B73C-9AD3A65CDE5A.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
