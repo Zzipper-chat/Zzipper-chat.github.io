@@ -186,7 +186,8 @@
                 Cookies.set("session-data", blankdata);
               }
               alert(Cookies.get("session-name"));
-              window.location = "/app";
+              window.location.replace("/app");
+              return null
             }
           }
         });
