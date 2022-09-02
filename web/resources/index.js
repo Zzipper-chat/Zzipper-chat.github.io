@@ -7,4 +7,4 @@ ready(() => {
 });
 document.getElementById("nav-luancher").onclick = () => {
   window.open("/app");
-}
+};
