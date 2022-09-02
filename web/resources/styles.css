@@ -58,7 +58,7 @@ body {
 }
 .description button {
   border: 1px solid #240647;
-  background: #240647;
+  background-color: #240647;
   border-radius: 1;
   color: #fff;
 }
