@@ -85,3 +85,15 @@ body {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 16px;
 }
+.gnu-icon-v3 {
+  background-image: url("https://www.gnu.org/graphics/gplv3-or-later.png");
+  overflow: clip;
+  max-width: 0px;
+  max-height: 0px;
+  padding: 10px 30px;
+  display: inline-block;
+  line-height: 1;
+  text-rendering: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
