@@ -178,8 +178,11 @@
             if (output) {
               var blankdata = JSON.parse("{}");
               blankdata = btoa(blankdata);
-              Cookies.set('session-name', document.getElementById("UserName").value);
-              Cookies.set('session-data', blankdata);
+              Cookies.set(
+                "session-name",
+                document.getElementById("UserName").value
+              );
+              Cookies.set("session-data", blankdata);
               window.location.replace("/app");
             }
           }
