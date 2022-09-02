@@ -160,7 +160,7 @@
         const form = document.getElementById("submit-NAME");
 
         form.addEventListener("submit", (event) => {
-          for (let c of document.getElementById("UserName")) {
+          for (let c of document.getElementById("UserName").value) {
             if (
               !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
                 c
