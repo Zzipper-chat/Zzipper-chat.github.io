@@ -1,4 +1,4 @@
-if (typeof  Cookies.get("session-name") !== "string") {
+if (typeof Cookies.get("session-name") !== "string") {
   console.log("RE....");
   window.location.replace("./name");
 } else {
