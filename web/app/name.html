@@ -37,6 +37,7 @@
   </head>
 
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <nav class="navbar navbar-expand-md justify-content-between px-2">
       <a class="navbar-brand" href="#">
         <img
@@ -89,7 +90,7 @@
               placeholder="Enter your preferred username here"
             />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" id="submit-NAME">Submit</button>
           <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
       </div>
@@ -153,6 +154,18 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"
       ></script>
+      <script>
+        const form  = document.getElementById('submit-NAME');
+
+form.addEventListener('submit', (event) => {
+    
+    for (let c of document.getElementById("UserName")) {
+       if (!("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(c))) {
+         alert("Invalid submission, please try again")
+       }
+}
+});
+      </script>
     </div>
   </body>
 </html>
