@@ -90,7 +90,7 @@
               placeholder="Enter your preferred username here"
             />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" id="sub-NAME">Submit</button>
           <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
       </div>
@@ -155,9 +155,9 @@
         crossorigin="anonymous"
       ></script>
       <script>
-        const form = document.getElementById("form-NAME");
+        const form = document.getElementById("sub-NAME");
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("click", (event) => {
           if (document.getElementById("UserName").value.length <= 2) {
             alert("Submission to short! must be at least 3 characters");
           } else {
