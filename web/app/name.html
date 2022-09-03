@@ -155,6 +155,10 @@
         crossorigin="anonymous"
       ></script>
       <script>
+        async function re(url) {
+          confirm("Redirecting you...")
+          window.location.replace(url);
+        }
         const form = document.getElementById("form-NAME");
 
         form.addEventListener("submit", (event) => {
@@ -187,7 +191,7 @@
               }
               alert(Cookies.get("session-name"));
               window.location.replace("/app/");
-              return null
+              re("/app/")
             }
           }
         });
