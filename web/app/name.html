@@ -172,6 +172,9 @@
               ) {
                 alert("Invalid submission, please try again");
                 output = false;
+                
+                location.reload();
+            
                 break;
               } else {
                 output = true;
@@ -189,9 +192,7 @@
               }
               window.location.replace("/app");
               return false;
-            } else {
-              location.reload();
-            }
+            } 
           }
         });
       </script>
