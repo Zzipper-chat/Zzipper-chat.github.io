@@ -80,7 +80,7 @@
           Please fill in some quick info below so the servers you join know who
           you are!
         </h5>
-        <form class="form-horizontal" id="form-NAME">
+        <form class="form-horizontal" id="form-NAME" target="_blank">
           <div class="form-group my-2">
             <label for="UserName">Name</label>
             <input
@@ -155,10 +155,7 @@
         crossorigin="anonymous"
       ></script>
       <script>
-        async function re(url = "/app/") {
-          confirm("Redirecting you...");
-          document.getElementById("appref").click();
-        }
+        
         const form = document.getElementById("form-NAME");
 
         form.addEventListener("submit", (event) => {
@@ -191,7 +188,7 @@
               }
               alert(Cookies.get("session-name"));
               window.location.replace("/app/");
-              re();
+             
             }
           }
         });
