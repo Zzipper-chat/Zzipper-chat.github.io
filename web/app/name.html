@@ -162,6 +162,7 @@
         form.addEventListener("click", (event) => {
           if (document.getElementById("UserName").value.length <= 2) {
             alert("Submission to short! must be at least 3 characters");
+            location.reload();
           } else {
             var output = false;
             for (let c of document.getElementById("UserName").value) {
@@ -173,7 +174,7 @@
                 alert("Invalid submission, please try again");
                 output = false;
                 
-                location.reload();
+                
             
                 break;
               } else {
@@ -192,7 +193,9 @@
               }
               window.location.replace("/app");
               return false;
-            } 
+            } else {
+              location.reload();
+            }
           }
         });
       </script>
