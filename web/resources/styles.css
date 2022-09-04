@@ -97,3 +97,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+div .text-center .p-3 {
+  width: 100%;
+}
