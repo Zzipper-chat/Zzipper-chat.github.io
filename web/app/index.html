@@ -78,7 +78,7 @@
     <!--  content -->
     <div class="zwrap">
       <!-- Nav -->
-      <nav class="zsidenav" id="zsidenav" data-bs-hidden="true">
+      <nav class="zsidenav collapsing collapse-horizontal show" id="zsidenav">
         <ul class="list-unstyled components">
           <li class="">Hello</li>
           <li class="">Hello</li>
@@ -87,13 +87,7 @@
         </ul>
       </nav>
       <div class="ztoggle">
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          data-bs-toggle="zsidenav"
-          data-bs-target="zsidenav"
-          aria-expanded="false"
-        >
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#zsidenav" aria-expanded="true" aria-controls="zsidenav">
           <i class="fas fa-bars"></i>
         </button>
       </div>
