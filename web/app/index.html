@@ -76,15 +76,14 @@
     </nav>
 
     <!--  content -->
-    <div class="zwrap">
-      <!-- Nav/selector -->
-      <div
-        class="collapse collapse-horizontal show"
-        id="zsidenav"
-        aria-labelledby="zsidenavLabel"
-      >
+        <div class="zwrap">
+      <!-- Nav -->
+      <div class="collapse collapse-horizontal show mtoggle" id="zsidenav" aria-labelledby="zsidenavLabel">
         <nav class="zsidenav">
-          <ul class="list-unstyled components">
+          <h3 class="nav-title">
+            Your Servers
+          </h3>
+          <ul class="list-unstyled components" id="side-channel-container">
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
@@ -93,20 +92,20 @@
         </nav>
       </div>
       <div class="ztoggle">
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#zsidenav"
-          aria-expanded="true"
-          aria-controls="zsidenav"
-        >
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target=".mtoggle" aria-expanded="true" aria-controls="zsidenav side-tab">
           <i class="fas fa-bars"></i>
         </button>
       </div>
       <!-- Content -->
       <div class="content">
-        <h1>Content</h1>
+        <h1>
+          Content
+        </h1>
+      </div>
+      <div class="side-tab collapse mtoggle collapse-horizontal" id="side-tab">
+        <div class="stab-inner">
+          Hello
+        </div>
       </div>
     </div>
     <!-- Footer -->
