@@ -40,12 +40,11 @@
   --bs-btn-hover-bg: #a47ece !important;
   --bs-btn-hover-border-color: #6d3da1 !important;
   --bs-btn-active-border-color: #6d3da1 !important;
-  --bs-btn-focus-shadow-rgb: 158, 12, 206 !important
+  --bs-btn-focus-shadow-rgb: 158, 12, 206 !important;
 }
 
 .side-tab {
   align-self: stretch;
-
 }
 
 .stab-inner {
