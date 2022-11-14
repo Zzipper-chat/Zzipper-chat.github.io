@@ -28,16 +28,15 @@
     <script src="/resources/app/connections.js"></script>
     <script>
       function createMessage(username, msg) {
-  let obj = document.createElement("p");
-  obj.classList.add("message");
-  let name = document.createElement("b");
-  name.classList.add("username");
-  name.textContent = username;
-  obj.appendChild(name)
-  obj.appendChild(document.createTextNode(`: ${msg}`))
-  return obj
-}
-
+        let obj = document.createElement("p");
+        obj.classList.add("message");
+        let name = document.createElement("b");
+        name.classList.add("username");
+        name.textContent = username;
+        obj.appendChild(name);
+        obj.appendChild(document.createTextNode(`: ${msg}`));
+        return obj;
+      }
     </script>
   </head>
   <body>
@@ -49,10 +48,9 @@
         <input type="submit" value="Join!" />
       </form>
     </nav>
-    <h3 id="server-name">Server name</h3><img id="server-img">
+    <h3 id="server-name">Server name</h3>
+    <img id="server-img" />
     <p id="server-descript">Server Description</p>
-    <div display="max-height: 60vh; overflow-y: scroll;">
-      
-    </div>
+    <div display="max-height: 60vh; overflow-y: scroll;"></div>
   </body>
 </html>
