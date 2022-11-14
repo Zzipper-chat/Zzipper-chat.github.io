@@ -26,6 +26,23 @@
       }
     </style>
     <script src="/resources/app/connections.js"></script>
+    <script>
+      function createMessage(username, msg) {
+  let obj = document.createElement("p");
+  obj.classList.add("message");
+  let name = document.createElement("b");
+  name.classList.add("username");
+  name.textContent = username;
+  obj.appendChild(name)
+  obj.appendChild(document.createTextNode(`: ${msg}`))
+  return obj
+}
+
+document.getElementById("message-cont").appendChild(
+  createMessage("me", "Hello")
+)
+
+    </script>
   </head>
   <body>
     <nav>
