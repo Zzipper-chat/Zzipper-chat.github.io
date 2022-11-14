@@ -10,7 +10,7 @@ function ModifConn(host) {
    ConnControl.host = host
    ConnControl.socketobj = ws
    fetch(`${host}/info`)
-     .then((resp) => resp.json()))
+     .then((resp) => resp.json())
      .then((data) => {
        ConnControl.name = data.name
        ConnControl.description = data.description
