@@ -41,7 +41,17 @@
         let url = event.target.url.value;
         ModifConn(url);
       }
-      function setupSocket(ws) {}
+      function setupSocket(ws) {
+        let cont = document.getElementById("msg-container")
+        ws.addEventListener('message', (event) => {
+          let json = JSON.parse(event.data)
+          let msg = createMessage(json.username, json.msg)
+          cont.appendChild(msg)
+          if (cont.childElementCount > 50) {
+            cont.removeChild(cont.children[0])
+          }
+        });
+      }
       window.onload = () => {
         document.addEventListener("ConnModify", () => {
           let name = document.getElementById("server-name");
