@@ -6,11 +6,10 @@ let ConnControl = {
 };
 const ConnModify = new Event("ConnModify");
 function ModifConn(host) {
-  console.log(host);
   let ws = new WebSocket(`wss://${host}/ws`);
   ConnControl.host = `https://${host}`;
   ConnControl.socketobj = ws;
-  fetch(`${host}/info`)
+  fetch(`${ConnControl.host}/info`)
     .then((resp) => resp.json())
     .then((data) => {
       ConnControl.name = data.name;
