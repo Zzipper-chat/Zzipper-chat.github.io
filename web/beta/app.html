@@ -54,6 +54,11 @@
           }
         });
       }
+      function sendmsg(event) {
+        event.preventDefault();
+        let name = event.target.username.value;
+        let msg = event.target.msg.value;
+      }
       window.onload = () => {
         document.addEventListener("ConnModify", () => {
           let name = document.getElementById("server-name");
