@@ -6,7 +6,7 @@ let ConnControl = {
 };
 const ConnModify = new Event("ConnModify");
 function ModifConn(host) {
-  
+  console.log(host);
   let ws = new WebSocket(`wss://${host}/ws`);
   ConnControl.host = `https://${host}`;
   ConnControl.socketobj = ws;
