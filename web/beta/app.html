@@ -38,6 +38,7 @@
         return obj;
       }
       function loads(event) {
+        event.preventDefault()
         let url = event.target.url.value;
         ModifConn(url);
       }
