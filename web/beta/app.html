@@ -37,12 +37,30 @@
         obj.appendChild(document.createTextNode(`: ${msg}`));
         return obj;
       }
+      function loads(event) {
+        let url = event.target.url.value
+        ModifConn(url)
+      }
+      function setupSocket(ws) {
+        
+      }
+      window.onload = () => {
+         document.addEventListener("ConnModify", () => {
+           let name = document.getElementById("server-name")
+           let img = document.getElementById("server-img")
+           let descript = document.getElementById("server-descript")
+           name.textContent = ConnControl.name
+           img.src = `${ConnControl.host}/public/pfp.png`
+           descript.textContent = ConnControl.description
+           setupSocket(ConnControl.socketobj)
+         })
+      }
     </script>
   </head>
   <body>
     <nav>
       <h1>Zipper-Chat backend beta test</h1>
-      <form>
+      <form onsubmit="loads(event)">
         <h2>Load server</h2>
         <input type="url" name="url" />
         <input type="submit" value="Join!" />
