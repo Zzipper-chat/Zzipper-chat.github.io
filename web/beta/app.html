@@ -38,18 +38,18 @@
         return obj;
       }
       function loads(event) {
-        event.preventDefault()
+        event.preventDefault();
         let url = event.target.url.value;
         ModifConn(url);
       }
       function setupSocket(ws) {
-        let cont = document.getElementById("msg-container")
-        ws.addEventListener('message', (event) => {
-          let json = JSON.parse(event.data)
-          let msg = createMessage(json.username, json.msg)
-          cont.appendChild(msg)
+        let cont = document.getElementById("msg-container");
+        ws.addEventListener("message", (event) => {
+          let json = JSON.parse(event.data);
+          let msg = createMessage(json.username, json.msg);
+          cont.appendChild(msg);
           if (cont.childElementCount > 50) {
-            cont.removeChild(cont.children[0])
+            cont.removeChild(cont.children[0]);
           }
         });
       }
