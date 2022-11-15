@@ -1,3 +1,4 @@
+let scrollLock = true;
 function createMessage(username, msg) {
   let obj = document.createElement("p");
   obj.classList.add("message");
@@ -22,6 +23,9 @@ function setupSocket(ws) {
     if (cont.childElementCount > 50) {
       cont.removeChild(cont.children[0]);
     }
+    if (scrollLock) {
+      cont.scrollTop = cont.scrollHeight;
+    }
   });
 }
 function sendmsg(event) {
@@ -31,8 +35,6 @@ function sendmsg(event) {
   let json = JSON.stringify({ username: name, msg: msg });
   ConnControl.socketobj.send(json);
   event.target.msg.value = "";
-  let elm = document.getElementById("msg-container");
-  elm.scrollTop = elm.scrollHeight;
 }
 window.onload = () => {
   document.addEventListener("ConnModify", () => {
