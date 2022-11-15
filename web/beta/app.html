@@ -77,7 +77,11 @@
       <h1>Zipper-Chat backend beta test</h1>
       <form onsubmit="loads(event)">
         <h2>Load server</h2>
-        <input pattern="(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]" required name="url" />
+        <input
+          pattern="(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]"
+          required
+          name="url"
+        />
         <input type="submit" value="Join!" />
       </form>
     </nav>
@@ -89,9 +93,14 @@
       id="msg-container"
     ></div>
     <form onsubmit="sendmsg(event)">
-      <input name="username" required placeholder="Username">
-      <input name="msg" required style="width: 500px;" placeholder="Message here">
-      <input type="submit" value="chat">
+      <input name="username" required placeholder="Username" />
+      <input
+        name="msg"
+        required
+        style="width: 500px"
+        placeholder="Message here"
+      />
+      <input type="submit" value="chat" />
     </form>
   </body>
 </html>
