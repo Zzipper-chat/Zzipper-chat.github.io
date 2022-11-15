@@ -28,7 +28,8 @@ function sendmsg(event) {
   event.preventDefault();
   let name = event.target.username.value;
   let msg = event.target.msg.value;
-  ConnControl.socketobj.send(JSON.stringify({ username: name, msg: msg }));
+  let json = JSON.stringify({ username: name, msg: msg })
+  ConnControl.socketobj.send(json);
 }
 window.onload = () => {
   document.addEventListener("ConnModify", () => {
