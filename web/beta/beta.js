@@ -31,6 +31,8 @@ function sendmsg(event) {
   let json = JSON.stringify({ username: name, msg: msg });
   ConnControl.socketobj.send(json);
   event.target.msg.value = "";
+  let elm = document.getElementById("msg-container");
+  elm.scrollTop = elm.scrollHeight;
 }
 window.onload = () => {
   document.addEventListener("ConnModify", () => {
