@@ -15,6 +15,7 @@ function atBottom(ele) {
 
 var scrollLock = true;
 function scrolls(event) {
+  console.log(atBottom(event.target))
   if (atBottom(event.target)) {
     scrollLock = true;
   } else {
