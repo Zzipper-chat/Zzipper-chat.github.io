@@ -1,21 +1,21 @@
 function atBottom(ele) {
   // https://stackoverflow.com/questions/8480466/how-to-check-if-scrollbar-is-at-the-bottom
-    var sh = ele.scrollHeight;
-    var st = ele.scrollTop;
-    var ht = ele.offsetHeight;
-    if(ht==0) {
-        return true;
-    }
-    if(st == sh - ht)
-        {return true;} 
-    else 
-        {return false;}
+  var sh = ele.scrollHeight;
+  var st = ele.scrollTop;
+  var ht = ele.offsetHeight;
+  if (ht == 0) {
+    return true;
+  }
+  if (st == sh - ht) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
 
 var scrollLock = true;
 function scrolls(event) {
-  console.log(atBottom(event.target))
+  console.log(atBottom(event.target));
   if (atBottom(event.target)) {
     scrollLock = true;
   } else {
