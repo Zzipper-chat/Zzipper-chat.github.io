@@ -1,4 +1,3 @@
-
 function atBottom(ele) {
   // https://stackoverflow.com/questions/8480466/how-to-check-if-scrollbar-is-at-the-bottom
   var sh = ele.scrollHeight;
@@ -70,8 +69,8 @@ window.onload = () => {
     descript.textContent = ConnControl.description;
     setupSocket(ConnControl.socketobj);
   });
-  document.forms[0].addEventListener("load", (event) => { 
-    alert("Loaded")
-    event.target.submit()
-  })
+  document.forms[0].addEventListener("load", (event) => {
+    alert("Loaded");
+    event.target.submit();
+  });
 };
