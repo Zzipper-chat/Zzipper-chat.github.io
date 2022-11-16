@@ -6,7 +6,7 @@ function atBottom(ele) {
   if (ht == 0) {
     return true;
   }
-  if (st == sh - ht) {
+  if (st + 4 > sh - ht) {
     return true;
   } else {
     return false;
