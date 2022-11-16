@@ -29,10 +29,10 @@ function createMessage(username, msg, old) {
   name.classList.add("username");
   name.textContent = username;
   obj.appendChild(name);
-  obj.appendChild(document.createTextNode(`: ${msg}`));
+  obj.appendChild(document.createTextNode(`: ${msg}&nbsp;`));
   if (old) {
     let oldtag = document.createElement("span");
-    oldtag.textContent = "&nbsp;Old"
+    oldtag.textContent = "Old"
     oldtag.classList.add("old")
     obj.appendChild(oldtag)
   }
