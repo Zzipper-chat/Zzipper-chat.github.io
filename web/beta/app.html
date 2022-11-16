@@ -48,6 +48,7 @@
     <div
       style="max-height: 48vh; overflow-y: scroll; border: solid black"
       id="msg-container"
+      onscroll="scrolls(event)"
     ></div>
     <form onsubmit="sendmsg(event)">
       <input name="username" required placeholder="Username" />
