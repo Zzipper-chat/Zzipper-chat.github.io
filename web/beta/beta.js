@@ -22,7 +22,7 @@ function scrolls(event) {
     scrollLock = false;
   }
 }
-function createMessage(username, msg) {
+function createMessage(username, msg, old) {
   let obj = document.createElement("p");
   obj.classList.add("message");
   let name = document.createElement("b");
@@ -30,6 +30,12 @@ function createMessage(username, msg) {
   name.textContent = username;
   obj.appendChild(name);
   obj.appendChild(document.createTextNode(`: ${msg}`));
+  if (old) {
+    let oldtag = document.createElement("span");
+    oldtag.textContent = "&nbsp;Old"
+    oldtag.classList.add("old")
+    obj.appendChild(oldtag)
+  }
   return obj;
 }
 function loads(event) {
@@ -41,7 +47,7 @@ function setupSocket(ws) {
   let cont = document.getElementById("msg-container");
   ws.addEventListener("message", (event) => {
     let json = JSON.parse(event.data);
-    let msg = createMessage(json.username, json.msg);
+    let msg = createMessage(json.username, json.msg, json.old);
     cont.appendChild(msg);
     if (cont.childElementCount > 50) {
       cont.removeChild(cont.children[0]);
