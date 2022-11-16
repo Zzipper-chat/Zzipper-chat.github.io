@@ -1,4 +1,5 @@
 function preload(event) {
+  alert("Running preload");
   event.target.submit();
 }
 
