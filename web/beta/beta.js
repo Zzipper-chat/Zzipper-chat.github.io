@@ -1,3 +1,7 @@
+function preload(event) {
+  event.target.submit();
+}
+
 function atBottom(ele) {
   // https://stackoverflow.com/questions/8480466/how-to-check-if-scrollbar-is-at-the-bottom
   var sh = ele.scrollHeight;
