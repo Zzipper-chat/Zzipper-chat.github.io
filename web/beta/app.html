@@ -25,6 +25,14 @@
         width: 100%;
       }
       .old {
+        color: grey;
+        text-decoration: underline;     
+      }
+      .old::before {
+        content: "[";
+      }
+      .old::after {
+        content: "]";
       }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
