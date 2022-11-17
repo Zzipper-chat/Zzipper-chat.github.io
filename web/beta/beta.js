@@ -45,6 +45,7 @@ function loads(event) {
 }
 function setupSocket(ws) {
   let cont = document.getElementById("msg-container");
+  cont.innerHTML = "";
   ws.addEventListener("message", (event) => {
     let json = JSON.parse(event.data);
     let msg = createMessage(json.username, json.msg, json.old);
