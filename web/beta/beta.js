@@ -45,6 +45,7 @@ function loads(event) {
 }
 function setupSocket(ws) {
   let cont = document.getElementById("msg-container");
+  alert("Clearing chat!");
   cont.innerHTML = "";
   ws.addEventListener("message", (event) => {
     let json = JSON.parse(event.data);
