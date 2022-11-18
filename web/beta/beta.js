@@ -72,7 +72,7 @@ window.onload = () => {
     let img = document.getElementById("server-img");
     let descript = document.getElementById("server-descript");
     name.textContent = ConnControl.name;
-    img.src = `${ConnControl.host}/pfp.png`;
+    img.src = `${ConnControl.host}/pfp`;
     descript.textContent = ConnControl.description;
     setupSocket(ConnControl.socketobj);
   });
