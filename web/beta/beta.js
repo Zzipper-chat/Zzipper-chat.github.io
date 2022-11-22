@@ -83,9 +83,9 @@ window.onload = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   if (urlParams.has("server")) {
-        document.forms[0].url.value = urlParams.get("server");
-      }
+    document.forms[0].url.value = urlParams.get("server");
+  }
   if (urlParams.has("user")) {
-        document.forms[1].username.value = urlParams.get("user");
-      }
+    document.forms[1].username.value = urlParams.get("user");
+  }
 };
