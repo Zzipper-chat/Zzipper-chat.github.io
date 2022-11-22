@@ -80,4 +80,9 @@ window.onload = () => {
     descript.textContent = ConnControl.description;
     setupSocket(ConnControl.socketobj);
   });
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  if (urlParams.has("server")) {
+        document.forms[0].url.value = urlParams.get("server");
+      }
 };
