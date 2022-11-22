@@ -80,8 +80,4 @@ window.onload = () => {
     descript.textContent = ConnControl.description;
     setupSocket(ConnControl.socketobj);
   });
-  document.forms[0].addEventListener("load", (event) => {
-    alert("Loaded");
-    event.target.submit();
-  });
 };
