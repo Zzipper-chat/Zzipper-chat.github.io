@@ -88,4 +88,7 @@ window.onload = () => {
   if (urlParams.has("user")) {
     document.forms[1].username.value = urlParams.get("user");
   }
+  if (urlParams.has("autojoin")) {
+    document.forms[0].submit();
+  }
 };
