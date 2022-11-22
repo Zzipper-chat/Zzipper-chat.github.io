@@ -85,4 +85,7 @@ window.onload = () => {
   if (urlParams.has("server")) {
         document.forms[0].url.value = urlParams.get("server");
       }
+  if (urlParams.has("user")) {
+        document.forms[1].username.value = urlParams.get("user");
+      }
 };
