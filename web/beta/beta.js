@@ -83,7 +83,7 @@ window.onload = () => {
       if (confirm("Your connection was interrupted! Reload the site?")) {
         window.location.reload();
       }
-    }
+    };
   });
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -94,7 +94,7 @@ window.onload = () => {
     document.forms[1].username.value = urlParams.get("user");
   }
   if (urlParams.has("auth")) {
-     document.forms[0].auth.value = urlParams.get("auth");
+    document.forms[0].auth.value = urlParams.get("auth");
   }
   if (urlParams.has("autojoin")) {
     ModifConn(document.forms[0].url.value);
