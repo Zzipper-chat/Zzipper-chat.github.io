@@ -79,6 +79,11 @@ window.onload = () => {
     img.src = `${ConnControl.host}/pfp`;
     descript.textContent = ConnControl.description;
     setupSocket(ConnControl.socketobj);
+    ConnControl.socketobj.onclose = () => {
+      if (confirm("Your connection was interrupted! Reload the site?")) {
+        window.location.reload();
+      }
+    }
   });
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -87,6 +92,9 @@ window.onload = () => {
   }
   if (urlParams.has("user")) {
     document.forms[1].username.value = urlParams.get("user");
+  }
+  if (urlParams.has("auth")) {
+     document.forms[0].auth.value = urlParams.get("auth");
   }
   if (urlParams.has("autojoin")) {
     ModifConn(document.forms[0].url.value);
