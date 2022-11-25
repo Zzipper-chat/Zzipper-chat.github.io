@@ -41,7 +41,8 @@ function createMessage(username, msg, old) {
 function loads(event) {
   event.preventDefault();
   let url = event.target.url.value;
-  ModifConn(url);
+  let auth = event.target.auth.value;
+  ModifConn(url, auth);
 }
 function setupSocket(ws) {
   let cont = document.getElementById("msg-container");
