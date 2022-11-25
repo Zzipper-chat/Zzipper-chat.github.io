@@ -98,6 +98,6 @@ window.onload = () => {
     document.forms[0].auth.value = urlParams.get("auth");
   }
   if (urlParams.has("autojoin")) {
-    ModifConn(document.forms[0].url.value);
+    ModifConn(document.forms[0].url.value, document.forms[0].auth.value);
   }
 };
