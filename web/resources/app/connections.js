@@ -8,7 +8,6 @@ const ConnModify = new Event("ConnModify");
 function ModifConn(host, auth) {
   let ws = new WebSocket(`wss://${host}/ws`);
   ws.onopen = () => {
-    alert(auth);
     ws.send(
       JSON.stringify({
         datetime: new Date().toLocaleString(),
