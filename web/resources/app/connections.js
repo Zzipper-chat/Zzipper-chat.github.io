@@ -9,14 +9,12 @@ function ModifConn(host, auth) {
   let ws = new WebSocket(`wss://${host}/ws`);
   ws.onopen = () => {
     ws.send(
-      JSON.stringify(
-        {
-          datetime: new Date().toLocaleString(), 
-          auth: auth
-        }
-        )
-    )
-  }
+      JSON.stringify({
+        datetime: new Date().toLocaleString(),
+        auth: auth,
+      })
+    );
+  };
   ConnControl.host = `https://${host}`;
   ConnControl.socketobj = ws;
   fetch(`${ConnControl.host}/info`)
