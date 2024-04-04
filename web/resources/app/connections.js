@@ -12,7 +12,7 @@ function ModifConn(host, auth) {
       JSON.stringify({
         datetime: new Date().toLocaleString(),
         auth: auth,
-      })
+      }),
     );
   };
   ConnControl.host = `https://${host}`;

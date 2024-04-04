@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -168,7 +168,7 @@
             for (let c of document.getElementById("UserName").value) {
               if (
                 !"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789_-".includes(
-                  c
+                  c,
                 )
               ) {
                 alert("Invalid submission, please try again");
@@ -184,7 +184,7 @@
               blankdata = btoa(blankdata);
               Cookies.set(
                 "session-name",
-                document.getElementById("UserName").value
+                document.getElementById("UserName").value,
               );
               if (typeof Cookies.get("session-data") == "undefined") {
                 Cookies.set("session-data", blankdata);
